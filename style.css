@@ -28,8 +28,7 @@ div.grid-container {
   min-height: 300px;
   border: black solid 5px;
   display: grid;
-  grid-template-columns: repeat(6, auto);
-  grid-template-rows: repeat(6, auto);
+  grid-template-columns: repeat(10, auto);
 }
 
 .grid-container div {
