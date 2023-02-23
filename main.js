@@ -8,19 +8,16 @@ let sliderValue = slider.value;
 
 function initialSettings() {
   createGrid(sliderValue * sliderValue);
-  gridContainer.style.gridTemplateColumns = `repeat(${20}, auto)`;
+  gridContainer.style.gridTemplateColumns = `repeat(${sliderValue}, auto)`;
   slider.addEventListener('input', changeGridSize);
   gridSquares.forEach(square => square.addEventListener('mouseover', addHover));
   clearBtn.addEventListener('click', resetSettings);
 }
 
 function resetSettings(event) {
-  gridContainer.replaceChildren();
-  slider.value = 20;
+  slider.value = 30;
   sliderValue = slider.value;
-  createGrid(sliderValue * sliderValue);
-  gridContainer.style.gridTemplateColumns = `repeat(${sliderValue}, auto)`;
-  gridSquares.forEach(square => square.addEventListener('mouseover', addHover));
+  resetGrid();
 }
 
 function createGrid(numberOfSquares) {
@@ -36,12 +33,16 @@ function addHover(event) {
   event.target.classList.add('grid-square-hover');
 }
 
-function changeGridSize(event) {
-  sliderValue = Number(slider.value);
+function resetGrid() {
   gridContainer.replaceChildren();
   createGrid(sliderValue * sliderValue);
-  gridContainer.style.gridTemplateColumns = `repeat(${slider.value}, auto)`;
+  gridContainer.style.gridTemplateColumns = `repeat(${sliderValue}, auto)`;
   gridSquares.forEach(square => square.addEventListener('mouseover', addHover));
+}
+
+function changeGridSize(event) {
+  sliderValue = Math.round(Number(slider.value));
+  resetGrid();
 }
 
 initialSettings();
