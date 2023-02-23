@@ -17,6 +17,6 @@ function addHover(event) {
   event.target.classList.add('grid-square-hover');
 }
 
-createSquares(16);
+createSquares(36);
 
 gridSquares.forEach(square => square.addEventListener('mouseover', addHover));

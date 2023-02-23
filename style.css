@@ -22,19 +22,20 @@ body {
 }
 
 div.grid-container {
-  height: 50%;
+  max-height: 300px;
+  max-width: 300px;
+  min-width: 300px;
+  min-height: 300px;
+  border: black solid 5px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  /* grid-gap: 0px; */
-
-  /* flex: 1; */
+  grid-template-columns: repeat(6, auto);
+  grid-template-rows: repeat(6, auto);
 }
 
 .grid-container div {
-  height: 50px;
-  width: 50px;
   border: solid black 1px;
+  height: auto;
+  width: auto;
 }
 
 .grid-square-hover {
