@@ -15,4 +15,34 @@ html {
 
 body {
   min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.grid-container {
+  height: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  /* grid-gap: 0px; */
+
+  /* flex: 1; */
+}
+
+.grid-container div {
+  height: 50px;
+  width: 50px;
+  border: solid black 1px;
+}
+
+.grid-square-hover {
+  background-color: black;
+}
+
+.slidecontainer {
+}
+
+.slider {
 }
