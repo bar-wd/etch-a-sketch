@@ -17,19 +17,20 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-image: url('./images/ny.png');
 }
 
 div.grid-container {
   max-height: 60vh;
-  max-width: 60vh;
-  min-width: 60vh;
+  max-width: 120vh;
+  min-width: 120vh;
   min-height: 60vh;
   border: black solid 5px;
   display: grid;
   grid-template-columns: repeat(10, auto);
+  filter: blur(5px);
 }
 
 .grid-container div {
@@ -39,24 +40,95 @@ div.grid-container {
 }
 
 .grid-square-hover {
-  background-color: #f09;
+  background-color: rgb(252, 0, 189);
 }
 
 .slidecontainer {
+  flex: 4;
+  display: flex;
 }
 
 .slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: rgba(255, 0, 153, 0.459);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  flex: 2;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #f09;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #f09;
+  cursor: pointer;
+}
+
+/* .slider {
+  flex: 2;
+}
+input[type='range'] {
+  -webkit-appearance: none;
+}
+
+input[type='range']:focus {
+  outline: none;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  background: rgb(12, 12, 12)
+  height: 5px;
+}
+
+input[type='range']::-moz-range-track {
+  background: rgb(14, 12, 13)
+  height: 5px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  background: rgb(217, 255, 0)
+  margin-top: -5px;
+  border-radius: 50%;
+}
+
+input[type='range']::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  background: rgb(154, 170, 6);
+  margin-top: -5px;
+  border-radius: 50%;
+} */
+
+.clear-btn {
+  flex: 1;
 }
 
 .slide-btn-container {
   display: flex;
+  justify-content: space-between;
+  width: 120vh;
+  gap: 50px;
 }
 
 /* Neon Styling */
-
-/* .neonText {
-  font-size: 35px;
-} */
 
 .neonText {
   font-size: 6.2rem;
