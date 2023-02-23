@@ -22,10 +22,10 @@ body {
 }
 
 div.grid-container {
-  max-height: 300px;
-  max-width: 300px;
-  min-width: 300px;
-  min-height: 300px;
+  max-height: 60vh;
+  max-width: 60vh;
+  min-width: 60vh;
+  min-height: 60vh;
   border: black solid 5px;
   display: grid;
   grid-template-columns: repeat(10, auto);
@@ -45,4 +45,8 @@ div.grid-container {
 }
 
 .slider {
+}
+
+.slide-btn-container {
+  display: flex;
 }
